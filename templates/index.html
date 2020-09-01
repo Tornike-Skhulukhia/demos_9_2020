@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Web App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style type="text/css">
+        form input[type='submit']{
+            margin: 12px 8px;
+        }
+
+        body{
+            background: url('/static/img/desk.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+
+        div.content{
+            background: rgba(10, 10, 10, 0.7);
+            padding: 12px;
+            border-radius: 8px;
+            height: 80vh;
+            width: 90vw;
+            margin: 10vh auto;
+            min-height: 280px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h4 class="center">Hi, this page allows you to type any url and get list of emails on that page</h4>
+        <form method="POST">
+            <label for="url" class="white-text">Type url here</label>
+            <input type="url" name="url" class="red-text" autofocus placeholder="https://abc.com">
+            <input type="submit" class="btn-large red" value="Get Emails">
+        </form>
+    </div>
+</body>
+</html>

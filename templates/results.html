@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Web App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style type="text/css">
+        .results > p{
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+        }
+
+        body{
+            background: url('/static/img/desk.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        div.content{
+            background: rgba(10, 10, 10, 0.7);
+            padding: 12px;
+            border-radius: 8px;
+            height: 80vh;
+            width: 90vw;
+            margin: 10vh auto;
+            min-height: 280px;
+        }
+
+        h5 span{
+            color: #bbc;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h5 class="center">Let's see the results for url <span>{{ url }}</span></h5>
+        <div class="results">
+            {% if not success %}
+                <p class="white-text red center">Can not retrieve data, please try later or contact us: support@abc.com</p>
+            {% else %}
+                {% if not emails %}<p>0 email found</p>{% endif %}
+                {% for email in emails %}
+                    <p class="white-text blue darken-4">{{ email }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
