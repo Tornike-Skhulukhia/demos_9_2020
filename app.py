@@ -65,4 +65,4 @@ def get_emails_api():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=9871)
+    app.run(debug=False, port=9871, host="0.0.0.0")
