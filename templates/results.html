@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Simple Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style type="text/css">
         .results > p{
@@ -33,7 +34,7 @@
 </head>
 <body>
     <div class="content">
-        <h5 class="center">Let's see the results for url <span>{{ url }}</span></h5>
+        <h5 class="center">Let's see the results for url <span>{{ url }}</span> ({{ emails|length }})</h5>
         <div class="results">
             {% if not success %}
                 <p class="white-text red center">Can not retrieve data, please try later or contact us: support@abc.com</p>
